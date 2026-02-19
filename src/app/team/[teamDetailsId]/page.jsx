@@ -7,12 +7,6 @@ import SocialWidget from "@/app/ui/Widget/SocialWidget"
 import imgUrl from '../../../../public/images/member_details_1.jpeg'
 import Image from "next/image"
 
-export async function generateStaticParams() {
-  return [
-    { TeamDetailsId: "1" }
-  ]
-}
-
 export default function TeamDetails() {
   return (
     <>

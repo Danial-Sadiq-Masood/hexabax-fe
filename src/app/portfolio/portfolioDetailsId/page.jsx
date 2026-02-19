@@ -8,12 +8,6 @@ import Spacing from "@/app/ui/Spacing";
 import Image from "next/image";
 import imgUrl from '../../../../public/images/portfolio_details_1.jpeg'
 
-export async function generateStaticParams() {
-  return [
-    { portfolioDetailsId: "1" },
-  ]
-}
-
 export default function PortfolioDetailsPage() {
   return (
     <>
