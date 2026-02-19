@@ -6,6 +6,13 @@ import SectionHeading from "@/app/ui/SectionHeading";
 import Spacing from "@/app/ui/Spacing";
 import Image from "next/image";
 import imgUrl from '../../../../public/images/case_study_img_1.jpeg'
+import CaseStudy from "@/app/ui/CaseStudy";
+
+export async function generateStaticParams() {
+  return [
+    { CaseStudyId: "1" },
+  ]
+}
 
 export default function CaseStudyDetailsPage() {
   return (

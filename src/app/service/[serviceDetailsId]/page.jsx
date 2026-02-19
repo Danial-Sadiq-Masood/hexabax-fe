@@ -11,6 +11,12 @@ import Spacing from "@/app/ui/Spacing";
 import Image from "next/image";
 import serviceImage from '../../../../public/images/service_img_1.jpeg'
 
+export async function generateStaticParams() {
+  return [
+    { ServiceDetailsPage: "1" }
+  ]
+}
+
 export default function ServiceDetailsPage() {
   return (
     <>
