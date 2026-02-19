@@ -13,7 +13,7 @@ import aboutImg3 from '../../../public/images/about_img_3.jpeg'
 import aboutImg4 from '../../../public/images/about_img_4.jpeg'
 
 
-
+console.log(123)
 
 const funfaceData = [
   {
