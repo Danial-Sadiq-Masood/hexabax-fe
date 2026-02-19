@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: "export", // if using static export
-  basePath: "/repository-name",
+  basePath: "/hexabax-fe",
   images: {
     unoptimized: true, // IMPORTANT for GitHub Pages
   },
