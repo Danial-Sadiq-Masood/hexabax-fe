@@ -35,9 +35,9 @@ export default function Header({ variant }) {
               <Div className="cs-main_header_left">
                 <Link className="cs-site_branding" href="/">
                   <Image
-                    src="/images/hexabax-logo.png"
+                    src="/images/hexabax-logo-black-sm.png"
                     alt="Logo"
-                    width={300}
+                    width={200}
                     height={80}
                   />
                 </Link>

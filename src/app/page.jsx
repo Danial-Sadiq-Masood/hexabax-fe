@@ -1,79 +1,78 @@
-import Cta from '@/app/ui/Cta';
-import Div from '@/app/ui/Div';
-import FunFact from '@/app/ui/FunFact';
-import Hero from '@/app/ui/Hero';
-import LogoList from '@/app/ui/LogoList';
-import MovingText from '@/app/ui/MovingText';
-import SectionHeading from '@/app/ui/SectionHeading';
-import PortfolioSlider from '@/app/ui/Slider/PortfolioSlider';
-import PostSlider from '@/app/ui/Slider/PostSlider';
-import TeamSlider from '@/app/ui/Slider/TeamSlider';
-import TestimonialSlider from '@/app/ui/Slider/TestimonialSlider';
-import TimelineSlider from '@/app/ui/Slider/TimelineSlider';
-import Spacing from '@/app/ui/Spacing';
-import VideoModal from '@/app/ui/VideoModal';
-import Card from './ui/Card';
+import Cta from "@/app/ui/Cta";
+import Div from "@/app/ui/Div";
+import FunFact from "@/app/ui/FunFact";
+import Hero from "@/app/ui/Hero";
+import LogoList from "@/app/ui/LogoList";
+import MovingText from "@/app/ui/MovingText";
+import SectionHeading from "@/app/ui/SectionHeading";
+import PortfolioSlider from "@/app/ui/Slider/PortfolioSlider";
+import PostSlider from "@/app/ui/Slider/PostSlider";
+import TeamSlider from "@/app/ui/Slider/TeamSlider";
+import TestimonialSlider from "@/app/ui/Slider/TestimonialSlider";
+import TimelineSlider from "@/app/ui/Slider/TimelineSlider";
+import Spacing from "@/app/ui/Spacing";
+import VideoModal from "@/app/ui/VideoModal";
+import Card from "./ui/Card";
 
 // Hero Social Links
 const heroSocialLinks = [
   {
-    name: 'Behance',
-    links: '/',
+    name: "Behance",
+    links: "/",
   },
   {
-    name: 'Twitter',
-    links: '/',
+    name: "Twitter",
+    links: "/",
   },
 ];
 // FunFact Data
 const funfaceData = [
   {
-    title: 'Years of Experience',
-    factNumber: '27',
+    title: "Years of Experience",
+    factNumber: "27",
   },
   {
-    title: 'Project Completed',
-    factNumber: '50',
+    title: "Project Completed",
+    factNumber: "50",
   },
   {
-    title: 'Team Members',
-    factNumber: '100',
+    title: "Team Members",
+    factNumber: "100",
   },
   {
-    title: 'Client Worldwide',
-    factNumber: '20',
+    title: "Client Worldwide",
+    factNumber: "20",
   },
 ];
 // Portfolio Data
 const portfolioData = [
   {
-    title: 'Colorful Art Work',
-    subtitle: 'See Details',
-    href: '/portfolio/portfolio-details',
-    src: '/images/portfolio_1.jpeg',
+    title: "Colorful Art Work",
+    subtitle: "See Details",
+    href: "/portfolio/portfolio-details",
+    src: "/images/portfolio_1.jpeg",
   },
   {
-    title: 'Colorful Art Work',
-    subtitle: 'See Details',
-    href: '/portfolio/portfolio-details',
-    src: '/images/portfolio_2.jpeg',
+    title: "Colorful Art Work",
+    subtitle: "See Details",
+    href: "/portfolio/portfolio-details",
+    src: "/images/portfolio_2.jpeg",
   },
   {
-    title: 'Colorful Art Work',
-    subtitle: 'See Details',
-    href: '/portfolio/portfolio-details',
-    src: '/images/portfolio_0.jpg',
+    title: "Colorful Art Work",
+    subtitle: "See Details",
+    href: "/portfolio/portfolio-details",
+    src: "/images/portfolio_0.jpg",
   },
   {
-    title: 'Colorful Art Work',
-    subtitle: 'See Details',
-    href: '/portfolio/portfolio-details',
-    src: '/images/portfolio_3.jpeg',
+    title: "Colorful Art Work",
+    subtitle: "See Details",
+    href: "/portfolio/portfolio-details",
+    src: "/images/portfolio_3.jpeg",
   },
 ];
 
 export default async function Home() {
-
   /*const res = await fetch(`${process.env.NEXT_PUBLIC_STRAPI_URL}/api/hero-data`, {
       headers: {
         Authorization: `Bearer f654d97634e0eb682fb5ac015dda38b99e4986bd786341262e19ad386174b5ded56c2c8dd568073194921724e233b4db2cb71e23aea0d9c133da8eec83ab6c010e113a881bc7339dd4cfff2226ef33e5fd8763c00b953afa0053f4f37e80e8db5c0dbc62f70cbf29f3da2862b4616f78c1faa6928820019ccf1bc89fab2ede21`,
@@ -87,7 +86,7 @@ export default async function Home() {
       {/* Start Hero Section */}
       <Hero
         title="Crafting Strategies and Driving Success"
-        subtitle='We deliver best problem solving solution for our client and provide finest finishing product in present and upcoming future.'
+        subtitle="We deliver best problem solving solution for our client and provide finest finishing product in present and upcoming future."
         btnText="Explore"
         btnLink="/contact"
         scrollDownId="#service"
@@ -192,7 +191,7 @@ export default async function Home() {
       {/* End Service Section */}
 
       {/* Start Portfolio Section */}
-      <Spacing lg="150" md="50" />
+      {/*<Spacing lg="150" md="50" />
       <Div>
         <Div className="container">
           <SectionHeading
@@ -203,11 +202,11 @@ export default async function Home() {
           <Spacing lg="90" md="45" />
         </Div>
         <PortfolioSlider data={portfolioData} />
-      </Div>
+      </Div>*/}
       {/* End Portfolio Section */}
 
       {/* Start Awards Section */}
-      <Spacing lg="150" md="80" />
+      {/*<Spacing lg="150" md="80" />
       <Div className="cs-shape_wrap_2">
         <Div className="cs-shape_2">
           <Div />
@@ -227,11 +226,11 @@ export default async function Home() {
             </Div>
           </Div>
         </Div>
-      </Div>
+      </Div>*/}
       {/* End Awards Section */}
 
       {/* Start Video Block Section */}
-      <Spacing lg="130" md="70" />
+      {/*<Spacing lg="130" md="70" />
       <Div className="container">
         <h2 className="cs-font_50 cs-m0 text-center cs-line_height_4">
           Our agile process is ability to adapt and respond to change. Agile
@@ -242,15 +241,15 @@ export default async function Home() {
           videoSrc="https://www.youtube.com/watch?v=VcaAVWtP48A"
           bgUrl="/images/video_bg.jpeg"
         />
-      </Div>
+      </Div>*/}
       {/* End Video Block Section */}
 
       {/* Start Team Section */}
       <Spacing lg="145" md="80" />
       <Div className="container">
         <SectionHeading
-          title="Awesome team <br/>members"
-          subtitle="Our Team"
+          title="Our Projects"
+          subtitle="We have successfully delivered projects in multiple domains"
           variant="cs-style1"
         />
         <Spacing lg="85" md="45" />
@@ -260,7 +259,7 @@ export default async function Home() {
       {/* End Team Section */}
 
       {/* Start Testimonial Section */}
-      <TestimonialSlider />
+      {/*<TestimonialSlider />*/}
       {/* End Testimonial Section */}
 
       {/* Start Blog Section */}
@@ -291,12 +290,15 @@ export default async function Home() {
 
       {/* Start MovingText Section */}
       <Spacing lg="125" md="70" />
-      <MovingText text="Our reputed world wide partners" />
-      <Spacing lg="105" md="70" />
       {/* End MovingText Section */}
 
       {/* Start LogoList Section */}
       <Div className="container">
+        <SectionHeading
+          title="Our Partners"
+          subtitle="Trusted across domains"
+        />
+        <Spacing lg="50" md="50" />
         <LogoList />
       </Div>
       <Spacing lg="150" md="80" />
@@ -305,7 +307,7 @@ export default async function Home() {
       {/* Start CTA Section */}
       <Div className="container">
         <Cta
-          title="Let’s disscuse make <br />something <i>cool</i> together"
+          title="Get In Touch With Us"
           btnText="Apply For Meeting"
           btnLink="/contact"
           bgSrc="/images/cta_bg.jpeg"

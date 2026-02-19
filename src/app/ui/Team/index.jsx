@@ -12,10 +12,9 @@ export default function Team({
   return (
     <Div className="cs-team cs-style1">
       <Div className="cs-member_thumb">
-        <img src={memberImage} alt={memberName} />
-        <Div className="cs-member_overlay" />
       </Div>
       <Div className="cs-member_info">
+        <Div><img src='/images/adb.png' alt={memberName}/></Div>
         <h2 className="cs-member_name">
           <Link href="/team/team-details">{memberName}</Link>
         </h2>
