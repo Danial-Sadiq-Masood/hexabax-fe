@@ -37,7 +37,7 @@ const funfaceData = [
   },
   {
     title: "Team Members",
-    factNumber: "100",
+    factNumber: "20",
   },
   {
     title: "Client Worldwide",
@@ -85,7 +85,7 @@ export default async function Home() {
     <>
       {/* Start Hero Section */}
       <Hero
-        title="Crafting Strategies and Driving Success"
+        title=""
         subtitle="We deliver best problem solving solution for our client and provide finest finishing product in present and upcoming future."
         btnText="Explore"
         btnLink="/contact"
@@ -119,69 +119,56 @@ export default async function Home() {
                 btnText="See All Services"
                 btnLink="/service"
               />
-              <Spacing lg="90" md="45" />
             </Div>
             <Div className="col-xl-8">
-              <Div className="row">
-                <Div className="col-lg-3 col-sm-6 cs-hidden_mobile"></Div>
-                <Div className="col-lg-3 col-sm-6">
+              <Div className="md:grid md:grid-cols-4 md:grid-rows-auto md:gap-3 flex flex-col gap-4">
+                <Div className="lg:col-start-2 lg:col-span-1 row-start-1 row-span-1 md:col-start-1 md:col-span-2 h-49">
                   <Card
                     title="Organizational Development"
                     link="/service/service-details"
-                    src="/images/service_1.jpeg"
+                    src="/images/service_org.jpg"
                     alt="Service"
                   />
-                  <Spacing lg="0" md="30" />
                 </Div>
-                <Div className="col-lg-3 col-sm-6 cs-hidden_mobile"></Div>
-                <Div className="col-lg-3 col-sm-6">
+                <Div className="lg:col-start-4 lg:col-span-1 row-start-1 row-span-1 md:col-start-3 md:col-span-2 h-49">
                   <Card
                     title="Project Management"
                     link="/service/service-details"
-                    src="/images/service_2.jpeg"
+                    src="/images/service_management.jpg"
                     alt="Service"
                   />
-                  <Spacing lg="0" md="30" />
                 </Div>
-                <Div className="col-lg-3 col-sm-6">
+                <Div className="lg:col-start-1 lg:col-span-1 row-start-2 row-span-1 md:col-start-1 md:col-span-2 h-49">
                   <Card
                     title="Human Resource Management"
                     link="/service/service-details"
-                    src="/images/service_3.jpeg"
+                    src="/images/service_hr.jpg"
                     alt="Service"
                   />
-                  <Spacing lg="0" md="30" />
                 </Div>
-                <Div className="col-lg-3 col-sm-6 cs-hidden_mobile"></Div>
-                <Div className="col-lg-3 col-sm-6">
+                <Div className="lg:col-start-3 lg:col-span-1 row-start-2 row-span-1 md:col-start-3 md:col-span-2 h-49">
                   <Card
                     title="Technology and Innovation"
                     link="/service/service-details"
                     src="/images/service_4.jpeg"
                     alt="Service"
                   />
-                  <Spacing lg="0" md="30" />
                 </Div>
-                <Div className="col-lg-3 col-sm-6 cs-hidden_mobile"></Div>
-                <Div className="col-lg-3 col-sm-6 cs-hidden_mobile"></Div>
-                <Div className="col-lg-3 col-sm-6">
+                <Div className="lg:col-start-2 lg:col-span-1 row-start-3 row-span-1 md:col-start-1 md:col-span-2 h-49">
                   <Card
                     title="Trainings and Skills Development"
                     link="/service/service-details"
-                    src="/images/service_1.jpeg"
+                    src="/images/service_training.jpg"
                     alt="Service"
                   />
-                  <Spacing lg="0" md="30" />
                 </Div>
-                <Div className="col-lg-3 col-sm-6 cs-hidden_mobile"></Div>
-                <Div className="col-lg-3 col-sm-6">
+                <Div className="lg:col-start-4 lg:col-span-1 row-start-3 row-span-1 md:col-start-3 md:col-span-2 h-49">
                   <Card
                     title="Research and Analysis"
                     link="/service/service-details"
-                    src="/images/service_2.jpeg"
+                    src="/images/service_research.jpg"
                     alt="Service"
                   />
-                  <Spacing lg="0" md="30" />
                 </Div>
               </Div>
             </Div>
@@ -271,7 +258,7 @@ export default async function Home() {
           <Div className="row">
             <Div className="col-xl-4">
               <SectionHeading
-                title="Explore recent publication"
+                title="Latest insights and updates"
                 subtitle="Our Blog"
                 btnText="View More Blog"
                 btnLink="/blog"
@@ -308,7 +295,7 @@ export default async function Home() {
       <Div className="container">
         <Cta
           title="Get In Touch With Us"
-          btnText="Apply For Meeting"
+          btnText="Our Contact Information"
           btnLink="/contact"
           bgSrc="/images/cta_bg.jpeg"
         />

@@ -4,43 +4,39 @@ import React from "react";
 import Slider from "react-slick";
 import Div from "../Div";
 import Team from "../Team";
-const teamData = [
+import Portfolio from "../Portfolio";
+
+const portfolioData = [
   {
-    memberImage: "/images/member_1.jpeg",
-    memberName: "Consultancy for Development of Centers of Excellence (COEs)",
-    memberDesignation:
+    title: "Consultancy for Development of Centers of Excellence (COEs)",
+    subtitle: "See Details",
+    href: "/portfolio/portfolio-details",
+    src: "/images/Data-Analytics.png",
+    category: "ui_ux_design",
+    partnerLogo: "/images/adb.png",
+    description:
       "Hexabax is transforming TVET institutes into industry-aligned Centers of Excellence through governance reform, capacity development, and modern service delivery models.",
-    memberSocial: {
-      linkedin: "/",
-      twitter: "/",
-      youtube: "/",
-      facebook: "/",
-    },
   },
   {
-    memberImage: "/images/member_2.jpeg",
-    memberName: "Business & Operational Models",
-    memberDesignation:
+    title: "Business & Operational Models",
+    subtitle: "See Details",
+    href: "/portfolio/portfolio-details",
+    src: "/images/development.png",
+    partnerLogo: "/images/adb.png",
+    category: "logo_design",
+    description:
       "Development of Business & Operational Models for operators and regulators of Water Supply, Wastewater, and Solid Waste Management services in 2 cities of Punjab province.",
-    memberSocial: {
-      linkedin: "/",
-      twitter: "/",
-      youtube: "/",
-      facebook: "/",
-    },
   },
   {
-    memberImage: "/images/member_1.jpeg",
-    memberName: "Consultancy for Development of Centers of Excellence (COEs)",
-    memberDesignation:
+    title: "Consultancy for Development of Centers of Excellence (COEs)",
+    subtitle: "See Details",
+    partnerLogo: "/images/undp.png",
+    href: "/portfolio/portfolio-details",
+    src: "/images/undp.jpg",
+    category: "web_design",
+    description:
       "Hexabax is transforming TVET institutes into industry-aligned Centers of Excellence through governance reform, capacity development, and modern service delivery models.",
-    memberSocial: {
-      linkedin: "/",
-      twitter: "/",
-      youtube: "/",
-      facebook: "/",
-    },
-  }
+  },
 ];
 
 export default function TeamSlider() {
@@ -108,13 +104,11 @@ export default function TeamSlider() {
 
   return (
     <Slider {...settings} className="cs-gap-24 cs-arrow_style2">
-      {teamData.map((item, index) => (
+      {portfolioData.map((item, index) => (
         <Div key={index}>
-          <Team
-            memberImage={item.memberImage}
-            memberName={item.memberName}
-            memberDesignation={item.memberDesignation}
-            memberSocial={{}}
+          <Portfolio
+            {...item}
+            variant="cs-style1 cs-type1"
           />
         </Div>
       ))}

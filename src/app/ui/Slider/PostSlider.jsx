@@ -6,46 +6,25 @@ import Post from '../Post';
 const postData = [
   {
     url: '/blog/blog-details',
-    src: '/images/post_1.jpeg',
+    src: '/images/blog_1.png',
     alt: 'Post',
     date: '07 Mar 2022',
-    title: 'How to keep fear from ruining your art business with confident',
+    title: 'How AI Revolutionizes Data Analysis: Unleashing the Power of Automation',
   },
   {
     url: '/blog/blog-details',
-    src: '/images/post_2.jpeg',
+    src: '/images/blog_2.jpg',
     alt: 'Post',
     date: '10 Feb 2022',
-    title: 'Artistic mind will be great for creation anything',
+    title: 'Field Visit Successfully Conducted by HexaBax Team Across Punjab',
   },
   {
     url: '/blog/blog-details',
-    src: '/images/post_3.jpeg',
+    src: '/images/blog_3.jpg',
     alt: 'Post',
     date: '05 Mar 2022',
-    title: 'A.I will take over all job for human within next year',
-  },
-  {
-    url: '/blog/blog-details',
-    src: '/images/post_1.jpeg',
-    alt: 'Post',
-    date: '07 Mar 2022',
-    title: 'How to keep fear from ruining your art business with confident',
-  },
-  {
-    url: '/blog/blog-details',
-    src: '/images/post_2.jpeg',
-    alt: 'Post',
-    date: '10 Feb 2022',
-    title: 'Artistic mind will be great for creation anything',
-  },
-  {
-    url: '/blog/blog-details',
-    src: '/images/post_3.jpeg',
-    alt: 'Post',
-    date: '05 Mar 2022',
-    title: 'A.I will take over all job for human within next year',
-  },
+    title: 'Strategies for Effective and Efficient Organizational Development in the Modern Era',
+  }
 ];
 
 export default function PostSlider() {

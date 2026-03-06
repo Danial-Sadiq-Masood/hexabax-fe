@@ -10,25 +10,31 @@ import { useState } from "react";
 
 const portfolioData = [
   {
-    title: 'Colorful Art Work',
+    title: 'Consultancy for Development of Centers of Excellence (COEs)',
     subtitle: 'See Details',
     href: '/portfolio/portfolio-details',
     src: '/images/portfolio_4.jpeg',
     category: 'ui_ux_design',
+    partnerLogo: '/images/adb.png',
+    description: 'Hexabax is transforming TVET institutes into industry-aligned Centers of Excellence through governance reform, capacity development, and modern service delivery models.',
   },
   {
-    title: 'Colorful Art Work',
+    title: 'Business & Operational Models',
     subtitle: 'See Details',
     href: '/portfolio/portfolio-details',
     src: '/images/portfolio_5.jpeg',
+    partnerLogo: '/images/adb.png',
     category: 'logo_design',
+    description : 'Development of Business & Operational Models for operators and regulators of Water Supply, Wastewater, and Solid Waste Management services in 2 cities of Punjab province.'
   },
   {
-    title: 'Colorful Art Work',
+    title: 'Consultancy for Development of Centers of Excellence (COEs)',
     subtitle: 'See Details',
+    partnerLogo: '/images/undp.png',
     href: '/portfolio/portfolio-details',
     src: '/images/portfolio_6.jpeg',
     category: 'web_design',
+    description: 'Hexabax is transforming TVET institutes into industry-aligned Centers of Excellence through governance reform, capacity development, and modern service delivery models.'
   },
   {
     title: 'Colorful Art Work',
@@ -106,79 +112,17 @@ export default function PortfolioPage() {
   return (
     <>
       <PageHeading
-        title="Portfolio"
+        title="Our Projects"
         bgSrc="/images/portfolio_hero_bg.jpeg"
-        pageLinkText="Portfolio"
+        pageLinkText="PROJECTS"
       />
       <Spacing lg="145" md="80" />
       <Div className="container">
-        <Div className="cs-portfolio_1_heading">
-          <SectionHeading title="Some recent work" subtitle="Our Portfolio" />
-          <Div className="cs-filter_menu cs-style1">
-            <ul className="cs-mp0 cs-center">
-              <li className={active === 'all' ? 'active' : ''}>
-                <span onClick={() => setActive('all')}>All</span>
-              </li>
-              {categoryMenu.map((item, index) => (
-                <li
-                  className={active === item.category ? 'active' : ''}
-                  key={index}
-                >
-                  <span onClick={() => setActive(item.category)}>
-                    {item.title}
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </Div>
-        </Div>
-        <Spacing lg="90" md="45" />
-        <Div className="row">
-          {portfolioData.slice(0, itemShow).map((item, index) => (
-            <Div
-              className={`${
-                index === 3 || index === 6 ? 'col-lg-8' : 'col-lg-4'
-              } ${
-                active === 'all'
-                  ? ''
-                  : !(active === item.category)
-                  ? 'd-none'
-                  : ''
-              }`}
-              key={index}
-            >
-              <Portfolio
-                title={item.title}
-                subtitle={item.subtitle}
-                href={item.href}
-                src={item.src}
-                variant="cs-style1 cs-type1"
-              />
-              <Spacing lg="25" md="25" />
-            </Div>
-          ))}
-        </Div>
-
-        <Div className="text-center">
-          {portfolioData.length <= itemShow ? (
-            ''
-          ) : (
-            <>
-              <Spacing lg="65" md="40" />
-              <span
-                className="cs-text_btn"
-                onClick={() => setItemShow(itemShow + 3)}
-              >
-                <span>Load More</span>
-                <Icon icon="bi:arrow-right" />
-              </span>
-            </>
-          )}
-        </Div>
+        
       </Div>
       <Spacing lg="145" md="80" />
       <Cta
-        title="agency@arino.com"
+        title="contact@hexabax.com"
         bgSrc="/images/cta_bg_2.jpeg"
         variant="rounded-0"
       />

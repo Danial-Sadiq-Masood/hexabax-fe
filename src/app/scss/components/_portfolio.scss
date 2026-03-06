@@ -12,7 +12,7 @@
   border-radius: 15px;
   overflow: hidden;
   position: relative;
-  height: 500px;
+  height: 400px;
   display: block;
   position: relative;
   cursor: pointer;
@@ -109,7 +109,7 @@
     }
   }
   &.cs-type1 {
-    height: 465px;
+    height: 400px;
     .cs-portfolio_info_bg {
       left: -50px;
       top: 50px;
@@ -139,9 +139,7 @@
   }
   &.cs-type1,
   &.cs-type2 {
-    img:not(.__react_modal_image__medium_img) {
-      width: 100%;
-    }
+    
 
     .cs-portfolio_title,
     .cs-portfolio_subtitle {

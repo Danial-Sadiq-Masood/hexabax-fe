@@ -3,7 +3,8 @@ import CustomCursor from "@/app/ui/CustomCursor";
 import Footer from "@/app/ui/Footer";
 import "swiper/css";
 import "swiper/css/pagination";
-import "./scss/index.scss";
+import './css/index.css';
+import "./globals.css";
 import { Poppins, Open_Sans } from "next/font/google";
 
 const poppins = Poppins({

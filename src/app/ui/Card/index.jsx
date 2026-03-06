@@ -4,9 +4,9 @@ import Div from '../Div';
 
 export default function Card({ title, link, src, alt }) {
   return (
-    <Link href={link} className="cs-card cs-style1">
+    <Link href={link} className="cs-card cs-style1 h-full">
       <>
-        <img src={src} alt={alt} />
+        <img src={src} alt={alt} className="h-full object-cover" />
         <Div className="cs-card_overlay" />
         <Div className="cs-card_info">
           <span className=" cs-hover_layer3 cs-accent_bg" />
