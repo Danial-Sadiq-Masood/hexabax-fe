@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.2.0",
+    "@tanstack/react-table": "^8.21.3",
     "bootstrap": "^5.3.5",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
