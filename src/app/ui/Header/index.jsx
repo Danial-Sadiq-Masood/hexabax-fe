@@ -1,19 +1,19 @@
-'use client';
-import { useEffect, useState } from 'react';
-import Div from '../Div';
-import Link from 'next/link';
-import DropDown from './DropDown';
-import ContactInfoWidget from '../Widget/ContactInfoWidget';
-import Newsletter from '../Widget/Newsletter';
-import SocialWidget from '../Widget/SocialWidget';
-import Image from 'next/image';
+"use client";
+import { useEffect, useState } from "react";
+import Div from "../Div";
+import Link from "next/link";
+import DropDown from "./DropDown";
+import ContactInfoWidget from "../Widget/ContactInfoWidget";
+import Newsletter from "../Widget/Newsletter";
+import SocialWidget from "../Widget/SocialWidget";
+import Image from "next/image";
 
 export default function Header({ variant }) {
   const [isSticky, setIsSticky] = useState(false);
   const [sideHeaderToggle, setSideHeaderToggle] = useState(false);
   const [mobileToggle, setMobileToggle] = useState(false);
   useEffect(() => {
-    window.addEventListener('scroll', () => {
+    window.addEventListener("scroll", () => {
       if (window.scrollY > 0) {
         setIsSticky(true);
       } else {
@@ -26,8 +26,8 @@ export default function Header({ variant }) {
     <>
       <header
         className={`cs-site_header cs-style1 text-uppercase ${
-          variant ? variant : ''
-        } cs-sticky_header ${isSticky ? 'cs-sticky_header_active' : ''}`}
+          variant ? variant : ""
+        } cs-sticky_header ${isSticky ? "cs-sticky_header_active" : ""}`}
       >
         <Div className="cs-main_header">
           <Div className="container">
@@ -37,7 +37,7 @@ export default function Header({ variant }) {
                   <Image
                     src="/images/hexabax-logo-white-1.png"
                     alt="Logo"
-                    className='h-20 w-auto'
+                    className="h-20 w-auto"
                     width={200}
                     height={80}
                   />
@@ -47,31 +47,14 @@ export default function Header({ variant }) {
                 <Div className="cs-nav cs-primary_font cs-medium">
                   <ul
                     className="cs-nav_list"
-                    style={{ display: `${mobileToggle ? 'block' : 'none'}` }}
+                    style={{ display: `${mobileToggle ? "block" : "none"}` }}
                   >
-                    <li className="menu-item-has-children">
-                      <Link href="/" onClick={() => setMobileToggle(false)}>
-                        About Us
-                      </Link>
-                      <DropDown>
-                        <ul>
-                          <li>
-                            <Link
-                              href="/"
-                              onClick={() => setMobileToggle(false)}
-                            >
-                              Vision/Mission
-                            </Link>
-                          </li>
-                        </ul>
-                      </DropDown>
-                    </li>
                     <li>
                       <Link
                         href="/about"
                         onClick={() => setMobileToggle(false)}
                       >
-                        What We Do
+                        About us
                       </Link>
                     </li>
                     <li className="menu-item-has-children">
@@ -79,24 +62,24 @@ export default function Header({ variant }) {
                         href="/service"
                         onClick={() => setMobileToggle(false)}
                       >
-                        Our Projects
+                        Services
                       </Link>
                       <DropDown>
                         <ul>
                           <li>
                             <Link
-                              href="/service"
+                              href="/portfolio"
                               onClick={() => setMobileToggle(false)}
                             >
-                              Services
+                              Projects
                             </Link>
                           </li>
                           <li>
                             <Link
-                              href="/service/service-details"
+                              href="/portfolio/portfolio-details"
                               onClick={() => setMobileToggle(false)}
                             >
-                              Service Details
+                              Portfolio Details
                             </Link>
                           </li>
                         </ul>
@@ -107,7 +90,7 @@ export default function Header({ variant }) {
                         href="/portfolio"
                         onClick={() => setMobileToggle(false)}
                       >
-                        Our Products
+                        Our Projects
                       </Link>
                       <DropDown>
                         <ul>
@@ -116,7 +99,7 @@ export default function Header({ variant }) {
                               href="/portfolio"
                               onClick={() => setMobileToggle(false)}
                             >
-                              Portfolio
+                              Projects
                             </Link>
                           </li>
                           <li>
@@ -208,8 +191,8 @@ export default function Header({ variant }) {
                   <span
                     className={
                       mobileToggle
-                        ? 'cs-munu_toggle cs-toggle_active'
-                        : 'cs-munu_toggle'
+                        ? "cs-munu_toggle cs-toggle_active"
+                        : "cs-munu_toggle"
                     }
                     onClick={() => setMobileToggle(!mobileToggle)}
                   >
@@ -239,7 +222,7 @@ export default function Header({ variant }) {
 
       <Div
         className={
-          sideHeaderToggle ? 'cs-side_header active' : 'cs-side_header'
+          sideHeaderToggle ? "cs-side_header active" : "cs-side_header"
         }
       >
         <button

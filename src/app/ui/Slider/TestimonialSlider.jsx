@@ -93,7 +93,7 @@ export default function TestimonialSlider() {
                   <Div className="slider-nav_item" key={index}>
                     <Div className="cs-rotate_img">
                       <Div className="cs-rotate_img_in">
-                        <img src={item.testimonialThumb} alt="Thumb" />
+                        {/*<img src={item.testimonialThumb} alt="Thumb" />*/}
                       </Div>
                     </Div>
                   </Div>

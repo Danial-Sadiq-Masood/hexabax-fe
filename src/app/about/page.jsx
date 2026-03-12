@@ -7,30 +7,29 @@ import PageHeading from "@/app/ui/PageHeading";
 import SectionHeading from "@/app/ui/SectionHeading";
 import TeamSlider from "@/app/ui/Slider/TeamSlider";
 import Spacing from "@/app/ui/Spacing";
-import aboutImg from '../../../public/images/about_img_1.jpeg'
-import aboutImg2 from '../../../public/images/about_img_2.jpeg'
-import aboutImg3 from '../../../public/images/about_img_3.jpeg'
-import aboutImg4 from '../../../public/images/about_img_4.jpeg'
+import aboutImg from '../../../public/images/service_org.jpg'
+import aboutImg2 from '../../../public/images/service_management.jpg'
+import aboutImg3 from '../../../public/images/service_research.jpg'
+import aboutImg4 from '../../../public/images/about.png'
 
 
-console.log(123)
 
 const funfaceData = [
   {
-    title: 'Global Happy Clients',
-    factNumber: '40K',
+    title: "Years of Experience",
+    factNumber: "27",
   },
   {
-    title: 'Project Completed',
-    factNumber: '50K',
+    title: "Project Completed",
+    factNumber: "50",
   },
   {
-    title: 'Team Members',
-    factNumber: '245',
+    title: "Team Members",
+    factNumber: "20",
   },
   {
-    title: 'Digital products',
-    factNumber: '550',
+    title: "Client Worldwide",
+    factNumber: "20",
   },
 ];
 
@@ -51,16 +50,12 @@ export default function AboutPage() {
         <Div className="row">
           <Div className="col-xl-5 col-lg-7">
             <SectionHeading
-              title="Your trusted partner for business"
-              subtitle="About Our Agency"
+              title="We Promise High Quality Management Consultancy"
+              subtitle="About Our Company"
             >
               <Spacing lg="30" md="20" />
               <p className="cs-m0">
-                This is the main factor that sets us apart from our competition
-                and allows us to deliver a specialist business consultancy
-                service. Our team applies its wide-ranging experience to
-                determining. Through our years of experience, we’ve also learned
-                that while each channel.
+                At Hexabax, we are not just a management consultancy; we are your trusted partners in transforming your organization into a powerhouse of efficiency, innovation, and growth. With a deep-rooted commitment to excellence, we specialize in a comprehensive suite of services tailored to meet your unique needs.
               </p>
               <Spacing lg="30" md="30" />
               <Div className="cs-separator cs-accent_bg"></Div>
@@ -99,7 +94,7 @@ export default function AboutPage() {
       {/* Start Fun Fact Section */}
       <Div className="container">
         <FunFact
-          title="Our fun fact"
+          title="Company Highlights"
           subtitle="Sed ut perspiciatis unde omnis iste natus error voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis."
           data={funfaceData}
         />
@@ -124,23 +119,24 @@ export default function AboutPage() {
           </Div>
           <Div className="col-xl-5 offset-xl-1 col-lg-6">
             <SectionHeading
-              title="Highly experienced pepole with us"
-              subtitle="Why Choose Us"
+              title="Vision"
+              subtitle=""
             >
               <Spacing lg="30" md="20" />
               <p className="cs-m0">
-                This is the main factor that sets us apart from our competition
-                and allows us to deliver a specialist business consultancy
-                service. Our team applies its wide-ranging experience to
-                determining. Through our years of experience, we’ve also learned
-                that while each channel.
+                Our vision is to ascend to unicorn status, becoming a global powerhouse in management consultancy, recognized for our game-changing strategies and transformative impact on businesses. We aim to lead the industry by consistently delivering exceptional value, innovation, and growth.
               </p>
-              <Spacing lg="15" md="15" />
+              <Spacing lg="30" md="30" />
+              <Div className="cs-separator cs-accent_bg"></Div>
+              <Spacing lg="25" md="0" />
+            </SectionHeading>
+            <SectionHeading
+              title="Mission"
+              subtitle=""
+            >
+              <Spacing lg="30" md="20" />
               <p className="cs-m0">
-                This is the main factor that sets us apart from our competition
-                and allows us to deliver a specialist business consultancy
-                service. Our team applies its wide-ranging experience to
-                determining.
+                We aspire to transform the landscape of management consultancy, propelling our firm towards unicorn status through relentless innovation, unrivaled expertise, and unparalleled client value. We are committed to nurturing our talented team, fostering a dynamic and inclusive work environment, and promoting personal and professional growth. In harmony with our dedication to sustainability, we aim to minimize our environmental footprint and contribute positively to the communities we serve.
               </p>
               <Spacing lg="30" md="30" />
               <Div className="cs-separator cs-accent_bg"></Div>
@@ -151,25 +147,12 @@ export default function AboutPage() {
       </Div>
       {/* End Why Choose Section */}
 
-      {/* Start Team Section */}
-      <Spacing lg="145" md="80" />
-      <Div className="container">
-        <SectionHeading
-          title="Awesome team <br/>members"
-          subtitle="Our Team"
-          variant="cs-style1"
-        />
-        <Spacing lg="85" md="45" />
-        <TeamSlider />
-      </Div>
-      {/* End Team Section */}
-
       {/* Start CTA Section */}
       <Spacing lg="150" md="80" />
       <Div className="container">
         <Cta
-          title="Let’s disscuse make <br />something <i>cool</i> together"
-          btnText="Apply For Meeting"
+          title="Get in Touch with Us"
+          btnText="Our Contact Information"
           btnLink="/contact"
           bgSrc="/images/cta_bg.jpeg"
         />
