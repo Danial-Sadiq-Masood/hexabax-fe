@@ -6,8 +6,7 @@ import Slider from 'react-slick';
 
 export default function PortfolioSlider({ data }) {
   /** Slider Settings **/
-  const settings = {
-    className: 'center',
+  const settings = {,
     centerMode: true,
     infinite: true,
     centerPadding: '0',
