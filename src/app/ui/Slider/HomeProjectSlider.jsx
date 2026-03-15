@@ -10,7 +10,7 @@ const portfolioData = [
   {
     title: "Consultancy for Development of Centers of Excellence (COEs)",
     subtitle: "See Details",
-    href: "/portfolio/portfolio-details",
+    href: "/projects/47",
     src: "/images/Data-Analytics.png",
     category: "ui_ux_design",
     partnerLogo: "/images/adb.png",
@@ -20,7 +20,7 @@ const portfolioData = [
   {
     title: "Business & Operational Models",
     subtitle: "See Details",
-    href: "/portfolio/portfolio-details",
+    href: "/projects/15",
     src: "/images/development.png",
     partnerLogo: "/images/adb.png",
     category: "logo_design",
@@ -28,18 +28,18 @@ const portfolioData = [
       "Development of Business & Operational Models for operators and regulators of Water Supply, Wastewater, and Solid Waste Management services in 2 cities of Punjab province.",
   },
   {
-    title: "Consultancy for Development of Centers of Excellence (COEs)",
+    title: "Institutional Capacity Building Plan",
     subtitle: "See Details",
     partnerLogo: "/images/undp.png",
-    href: "/portfolio/portfolio-details",
+    href: "/projects/14",
     src: "/images/undp.jpg",
     category: "web_design",
     description:
-      "Hexabax is transforming TVET institutes into industry-aligned Centers of Excellence through governance reform, capacity development, and modern service delivery models.",
+      "Institutional and capacity building assessment and development of Institutional Capacity Building Plan of strategic government institutions in South Sudan. This included development of action plan for 9 federal ministries of the Government of South Sudan for implementation of the reform package and recommended measures for improvements in public service delivery.",
   },
 ];
 
-export default function TeamSlider() {
+export default function HomeProjectSlider() {
   /** Team Member Data **/
 
   /** Slider Settings **/

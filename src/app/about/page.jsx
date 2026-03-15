@@ -5,7 +5,7 @@ import Div from "@/app/ui/Div";
 import FunFact from "@/app/ui/FunFact";
 import PageHeading from "@/app/ui/PageHeading";
 import SectionHeading from "@/app/ui/SectionHeading";
-import TeamSlider from "@/app/ui/Slider/TeamSlider";
+import TeamSlider from "@/app/ui/Slider/HomeProjectSlider";
 import Spacing from "@/app/ui/Spacing";
 import aboutImg from '../../../public/images/service_org.jpg'
 import aboutImg2 from '../../../public/images/service_management.jpg'

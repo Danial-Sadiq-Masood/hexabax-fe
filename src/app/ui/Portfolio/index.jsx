@@ -12,7 +12,6 @@ export default function Portfolio({
   description,
   src,
 }) {
-  console.log(description, title);
 
   return (
     <Link
@@ -34,7 +33,7 @@ export default function Portfolio({
               className="h-[100px] w-auto object-cover rounded-xl"
             />
             <h4 className="text-2xl mb-0">{title}</h4>
-            <p className="text">{description}</p>
+            <p className="text line-clamp-4">{description}</p>
           </div>
         </Div>
         <Div className="cs-portfolio_info">

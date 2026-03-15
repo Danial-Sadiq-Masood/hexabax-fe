@@ -5,21 +5,21 @@ import Div from '../Div';
 import Post from '../Post';
 const postData = [
   {
-    url: '/blog/blog-details',
+    url: '/blog/how-ai-revolutionizes-data-analysis-unleashing-the-power-of-automation',
     src: '/images/blog_1.png',
     alt: 'Post',
     date: '07 Mar 2022',
     title: 'How AI Revolutionizes Data Analysis: Unleashing the Power of Automation',
   },
   {
-    url: '/blog/blog-details',
+    url: '/blog/field-visit-successfully-conducted-by-hexabax-team-across-punjab',
     src: '/images/blog_2.jpg',
     alt: 'Post',
     date: '10 Feb 2022',
     title: 'Field Visit Successfully Conducted by HexaBax Team Across Punjab',
   },
   {
-    url: '/blog/blog-details',
+    url: '/blog/strategies-for-effective-and-efficient-organizational-development-in-the-modern-era',
     src: '/images/blog_3.jpg',
     alt: 'Post',
     date: '05 Mar 2022',

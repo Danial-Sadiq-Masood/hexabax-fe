@@ -7,7 +7,7 @@ import MovingText from "@/app/ui/MovingText";
 import SectionHeading from "@/app/ui/SectionHeading";
 import PortfolioSlider from "@/app/ui/Slider/PortfolioSlider";
 import PostSlider from "@/app/ui/Slider/PostSlider";
-import TeamSlider from "@/app/ui/Slider/TeamSlider";
+import HomeProjectSlider from "@/app/ui/Slider/HomeProjectSlider";
 import TestimonialSlider from "@/app/ui/Slider/TestimonialSlider";
 import TimelineSlider from "@/app/ui/Slider/TimelineSlider";
 import Spacing from "@/app/ui/Spacing";
@@ -17,13 +17,17 @@ import Card from "./ui/Card";
 // Hero Social Links
 const heroSocialLinks = [
   {
-    name: "Behance",
-    links: "/",
+    name: "Facebook",
+    links: "https://www.facebook.com/people/Hexabax/61551029099011/",
   },
   {
-    name: "Twitter",
-    links: "/",
+    name: "Linkedin",
+    links: "https://www.linkedin.com/company/hexabax/",
   },
+  {
+    name: "Instagram",
+    links: "https://www.instagram.com/hexabaxofficial/",
+  }
 ];
 // FunFact Data
 const funfaceData = [
@@ -88,7 +92,7 @@ export default async function Home() {
         title=""
         subtitle="We deliver best problem solving solution for our client and provide finest finishing product in present and upcoming future."
         btnText="Explore"
-        btnLink="/contact"
+        btnLink="/service"
         scrollDownId="#service"
         socialLinksHeading="Follow Us"
         heroSocialLinks={heroSocialLinks}
@@ -125,7 +129,7 @@ export default async function Home() {
                 <Div className="lg:col-start-2 lg:col-span-1 row-start-1 row-span-1 md:col-start-1 md:col-span-2 h-49">
                   <Card
                     title="Organizational Development"
-                    link="/service/service-details"
+                    link="/service/organizational-development"
                     src="/images/service_org.jpg"
                     alt="Service"
                   />
@@ -133,7 +137,7 @@ export default async function Home() {
                 <Div className="lg:col-start-4 lg:col-span-1 row-start-1 row-span-1 md:col-start-3 md:col-span-2 h-49">
                   <Card
                     title="Project Management"
-                    link="/service/service-details"
+                    link="/service/project-management"
                     src="/images/service_management.jpg"
                     alt="Service"
                   />
@@ -141,7 +145,7 @@ export default async function Home() {
                 <Div className="lg:col-start-1 lg:col-span-1 row-start-2 row-span-1 md:col-start-1 md:col-span-2 h-49">
                   <Card
                     title="Human Resource Management"
-                    link="/service/service-details"
+                    link="/service/hr-management"
                     src="/images/service_hr.jpg"
                     alt="Service"
                   />
@@ -149,7 +153,7 @@ export default async function Home() {
                 <Div className="lg:col-start-3 lg:col-span-1 row-start-2 row-span-1 md:col-start-3 md:col-span-2 h-49">
                   <Card
                     title="Technology and Innovation"
-                    link="/service/service-details"
+                    link="/service/technology-and-innovation"
                     src="/images/service_4.jpeg"
                     alt="Service"
                   />
@@ -157,7 +161,7 @@ export default async function Home() {
                 <Div className="lg:col-start-2 lg:col-span-1 row-start-3 row-span-1 md:col-start-1 md:col-span-2 h-49">
                   <Card
                     title="Trainings and Skills Development"
-                    link="/service/service-details"
+                    link="/service/trainings"
                     src="/images/service_training.jpg"
                     alt="Service"
                   />
@@ -165,7 +169,7 @@ export default async function Home() {
                 <Div className="lg:col-start-4 lg:col-span-1 row-start-3 row-span-1 md:col-start-3 md:col-span-2 h-49">
                   <Card
                     title="Research and Analysis"
-                    link="/service/service-details"
+                    link="/service/research-and-data-analytics"
                     src="/images/service_research.jpg"
                     alt="Service"
                   />
@@ -240,7 +244,7 @@ export default async function Home() {
           variant="cs-style1"
         />
         <Spacing lg="85" md="45" />
-        <TeamSlider />
+        <HomeProjectSlider />
       </Div>
       <Spacing lg="150" md="80" />
       {/* End Team Section */}

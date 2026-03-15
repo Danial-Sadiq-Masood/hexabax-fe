@@ -8,7 +8,11 @@ import Newsletter from "../Widget/Newsletter";
 import SocialWidget from "../Widget/SocialWidget";
 import Image from "next/image";
 
+import { servicesData } from "@/assets/data/services-data";
+
 export default function Header({ variant }) {
+  const servicesLinks = Object.entries(servicesData);
+
   const [isSticky, setIsSticky] = useState(false);
   const [sideHeaderToggle, setSideHeaderToggle] = useState(false);
   const [mobileToggle, setMobileToggle] = useState(false);
@@ -66,58 +70,32 @@ export default function Header({ variant }) {
                       </Link>
                       <DropDown>
                         <ul>
-                          <li>
-                            <Link
-                              href="/portfolio"
-                              onClick={() => setMobileToggle(false)}
-                            >
-                              Projects
-                            </Link>
-                          </li>
-                          <li>
-                            <Link
-                              href="/portfolio/portfolio-details"
-                              onClick={() => setMobileToggle(false)}
-                            >
-                              Portfolio Details
-                            </Link>
-                          </li>
+                          {servicesLinks.map((d) => (
+                            <li key={d[0]}>
+                              <Link
+                                href={`/service/${d[0]}`}
+                                onClick={() => setMobileToggle(false)}
+                              >
+                                {d[1].heading}
+                              </Link>
+                            </li>
+                          ))}
                         </ul>
                       </DropDown>
                     </li>
-                    <li className="menu-item-has-children">
+                    <li className="">
                       <Link
-                        href="/portfolio"
+                        href="/projects"
                         onClick={() => setMobileToggle(false)}
                       >
                         Our Projects
                       </Link>
-                      <DropDown>
-                        <ul>
-                          <li>
-                            <Link
-                              href="/portfolio"
-                              onClick={() => setMobileToggle(false)}
-                            >
-                              Projects
-                            </Link>
-                          </li>
-                          <li>
-                            <Link
-                              href="/portfolio/portfolio-details"
-                              onClick={() => setMobileToggle(false)}
-                            >
-                              Portfolio Details
-                            </Link>
-                          </li>
-                        </ul>
-                      </DropDown>
                     </li>
-                    <li className="menu-item-has-children">
+                    <li className="">
                       <Link href="/blog" onClick={() => setMobileToggle(false)}>
-                        Media
+                        Blog
                       </Link>
-                      <DropDown>
+                      {/*<DropDown>
                         <ul>
                           <li>
                             <Link
@@ -136,13 +114,13 @@ export default function Header({ variant }) {
                             </Link>
                           </li>
                         </ul>
-                      </DropDown>
+                      </DropDown>*/}
                     </li>
-                    <li className="menu-item-has-children">
-                      <Link href="/" onClick={() => setMobileToggle(false)}>
+                    <li className="">
+                      <Link href="/careers" onClick={() => setMobileToggle(false)}>
                         Career
                       </Link>
-                      <DropDown>
+                      {/*<DropDown>
                         <ul>
                           <li>
                             <Link
@@ -185,7 +163,7 @@ export default function Header({ variant }) {
                             </Link>
                           </li>
                         </ul>
-                      </DropDown>
+                      </DropDown>*/}
                     </li>
                   </ul>
                   <span
@@ -201,7 +179,7 @@ export default function Header({ variant }) {
                 </Div>
               </Div>
               <Div className="cs-main_header_right">
-                <Div className="cs-toolbox">
+                {/*<Div className="cs-toolbox">
                   <span
                     className="cs-icon_btn"
                     onClick={() => setSideHeaderToggle(!sideHeaderToggle)}
@@ -213,7 +191,7 @@ export default function Header({ variant }) {
                       <span />
                     </span>
                   </span>
-                </Div>
+                </Div>*/}
               </Div>
             </Div>
           </Div>

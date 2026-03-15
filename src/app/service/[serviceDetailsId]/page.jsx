@@ -13,12 +13,16 @@ import { servicesData } from '@/assets/data/services-data'
 
 import { notFound } from "next/navigation";
 
-import serviceImage from "../../../../public/images/organizational-dev.jpg";
+export async function generateStaticParams() {
+
+  return Object.keys(servicesData).map(d => ({
+    serviceDetailsId : d
+  }))
+
+}
 
 export default async function ServiceDetailsPage({params}) {
-  const pageId = (await params)['serviceDetailsId']
-
-  console.log(pageId)
+  const pageId = params['serviceDetailsId']
 
   const data = servicesData[pageId]
 

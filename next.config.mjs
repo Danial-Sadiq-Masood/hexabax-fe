@@ -2,7 +2,7 @@
 const nextConfig = {
   //output: "export", // if using static export
   images: {
-    unoptimized: true, // IMPORTANT for GitHub Pages
+    unoptimized: false, // IMPORTANT for GitHub Pages
   },
 };
 

@@ -8,7 +8,7 @@ import LogoList from '@/app/ui/LogoList';
 import MovingText from '@/app/ui/MovingText';
 import SectionHeading from '@/app/ui/SectionHeading';
 import PortfolioSlider from '@/app/ui/Slider/PortfolioSlider';
-import TeamSlider from '@/app/ui/Slider/TeamSlider';
+import TeamSlider from '@/app/ui/Slider/HomeProjectSlider';
 import TestimonialSliderStyle2 from '@/app/ui/Slider/TestimonialSliderStyle2';
 import Spacing from '@/app/ui/Spacing';
 import ContactInfoWidget from '@/app/ui/Widget/ContactInfoWidget';

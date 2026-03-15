@@ -9,15 +9,7 @@ import { DataTable } from "@/app/ui/Table/data-table";
 import { columns } from "@/app/ui/Table/columns";
 import data from "./projects.json";
 
-import {
-  ChevronLeft,
-  ChevronRight,
-  ChevronsLeft,
-  ChevronsRight,
-} from "lucide-react";
-
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
+import PortfolioSection from './PortfolioSection'
 
 const portfolioData = [
   {
@@ -119,61 +111,52 @@ const categoryMenu = [
   },
 ];
 
-export default function PortfolioSection({ pageNumber }) {
-  const pageSize = 9;
-  const startingIndex = (pageNumber) * pageSize;
-  const endingIndex = Math.min(startingIndex + pageSize, data.length);
-  const dataSlice = data.slice(startingIndex, endingIndex);
+function parsePage(value){
+  if (typeof value !== "string") return 0
 
-  const lastPage = Math.floor(data.length / pageSize);
+  const page = Number.parseInt(value, 10)
+
+  if (!Number.isFinite(page) || page < 0) return 0
+
+  return page
+}
+
+export function generateStaticParams() {
+
+  const upper = Math.floor(data.length / pageSize);
+
+  return new Array(upper).fill('').map((_,i) => ({
+    page : `${i}`
+  }))
+}
+
+export default function PortfolioPage({ searchParams }) {
+  const page = parsePage(searchParams.page);
 
   return (
     <>
-      <div className="h-full grid grid-cols-3 gap-6 auto-rows-auto w-full p-8">
-        {dataSlice.slice(0, 20).map((datum, index) => (
-          <Div key={index} className="col-span-1 row-span-1">
-            <ProjectPortfolioBox
-              title={datum["Project Title"]}
-              description={datum["Description"]}
-              client={datum["Client"]}
-              src={`/images/portfolio_${(index % 7) + 1}.jpeg`}
-              href={""}
-              variant="cs-style1 cs-type1"
-            />
-          </Div>
-        ))}
-      </div>
-      <div className="flex justify-end px-8">
-        <div className="flex w-[100px] items-center justify-center text-sm font-medium">
-          Page {pageNumber + 1} of {lastPage + 1}
+      <PageHeading
+        title="Our Projects"
+        bgSrc="/images/portfolio_hero_bg.jpeg"
+        pageLinkText="PROJECTS"
+      />
+      <Spacing lg="145" md="80" />
+      <Div className="container">
+        <PortfolioSection pageNumber={page}/>
+      </Div>
+      {/*<Div className="container">
+        <div className="hidden h-full flex-1 flex-col w-full p-8 md:flex">
+          <div className="">
+            <DataTable data={data} columns={columns} />
+          </div>
         </div>
-        <div className="flex items-center space-x-2">
-          <Link href={"?page=0"} scroll={false}>
-            <Button variant="outline" className="hidden h-8 w-8 p-0 lg:flex">
-              <span className="sr-only">Go to first page</span>
-              <ChevronsLeft />
-            </Button>
-          </Link>
-          <Link href={`?page=${Math.max(pageNumber - 1, 0)}`} scroll={false}>
-            <Button variant="outline" className="h-8 w-8 p-0">
-              <span className="sr-only">Go to previous page</span>
-              <ChevronLeft />
-            </Button>
-          </Link>
-          <Link href={`?page=${Math.min(pageNumber + 1, lastPage)}`} scroll={false}>
-            <Button variant="outline" className="h-8 w-8 p-0">
-              <span className="sr-only">Go to next page</span>
-              <ChevronRight />
-            </Button>
-          </Link>
-          <Link href={`?page=${lastPage}`} scroll={false}>
-            <Button variant="outline" className="hidden h-8 w-8 p-0 lg:flex">
-              <span className="sr-only">Go to last page</span>
-              <ChevronsRight />
-            </Button>
-          </Link>
-        </div>
-      </div>
+      </Div>*/}
+      <Spacing lg="145" md="80" />
+      <Cta
+        title="contact@hexabax.com"
+        bgSrc="/images/cta_bg_2.jpeg"
+        variant="rounded-0"
+      />
     </>
   );
 }

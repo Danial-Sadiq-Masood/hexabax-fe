@@ -12,39 +12,53 @@ export default function ProjectPortfolioBox({
   partnerLogo,
   description,
   src,
+  link,
+  date
 }) {
-  console.log(description, title);
 
   return (
-    <Link
-      href={href}
-      className={`cs-portfolio cs-bg ${variant ? variant : "cs-style1"}`}
+    <div
+      className={`cs-portfolio cs-bg h-full flex`}
     >
       <>
-        <Div className="cs-portfolio_hover" />
-        <Div
-          className="w-full h-full p-6 bg-black/50 bg-blend-multiply bg-cover bg-center flex items-center"
-          style={{ backgroundImage: `url("${src}")` }}
-        >
-          <div className="flex flex-col gap-2 items-start text-white">
-            {partnerLogo && <Image
-              src={partnerLogo || "/images/adb.png"}
-              alt="partner logo"
-              width={40}
-              height={40}
-              className="h-[100px] w-auto object-cover rounded-xl"
-            />}
-            <h4 className="text-2xl mb-0">{title}</h4>
-            <p className="text-xl font-bold mb-0 italic">Client : {client}</p>
-            <p className="text line-clamp-3">{description}</p>
-          </div>
-        </Div>
-        <Div className="cs-portfolio_info">
-          <Div className="cs-portfolio_info_bg cs-accent_bg" />
-          <h2 className="cs-portfolio_title">Read More</h2>
-          <Div className="cs-portfolio_subtitle">View Details</Div>
-        </Div>
+        <div className="bg-neutral-primary-soft max-w-sm p-6 border border-default rounded-xl shadow-xs flex flex-col justify-between items-start">
+          <h5 className="mb-3 text-3xl font-semibold tracking-tight text-heading leading-8">
+            {title}
+          </h5>
+          <h5 className="mb-3 text-xl font-semibold tracking-tight text-heading leading-8">
+            Client : <span className="font-normal">{client}</span>
+          </h5>
+          <h5 className="mb-3 text-xl font-semibold tracking-tight text-heading leading-8">
+            Date : <span className="font-normal">{date}</span>
+          </h5>
+          <p className="text-body mb-6 line-clamp-3 text-white">
+            {description}
+          </p>
+          <Link
+            href={link}
+            className="inline-flex items-center text-white bg-blue-600 box-border border border-transparent hover:bg-white focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-xl text-sm px-4 py-2.5 focus:outline-none"
+          >
+            Read more
+            <svg
+              className="w-4 h-4 ms-1.5 rtl:rotate-180 -me-0.5"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="none"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M19 12H5m14 0-4 4m4-4-4-4"
+              />
+            </svg>
+          </Link>
+        </div>
       </>
-    </Link>
+    </div>
   );
 }
