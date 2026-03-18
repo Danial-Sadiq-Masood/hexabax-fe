@@ -10,7 +10,7 @@ import Spacing from "@/app/ui/Spacing";
 import aboutImg from '../../../public/images/service_org.jpg'
 import aboutImg2 from '../../../public/images/service_management.jpg'
 import aboutImg3 from '../../../public/images/service_research.jpg'
-import aboutImg4 from '../../../public/images/about.png'
+import aboutImg4 from '@/assets/images/project_1.jpg'
 
 
 
@@ -90,12 +90,12 @@ export default function AboutPage() {
       <Div className="container">
         <Div className="row">
           <Div className="col-xl-5 col-lg-6">
-            <Div className="cs-image_layer cs-style1">
-              <Div className="cs-image_layer_in">
+            <Div className="cs-image_layer cs-style1 h-full">
+              <Div className="cs-image_layer_in h-full">
                 <Image
                   src={aboutImg4}
                   alt="About"
-                  className="w-full cs-radius_15"
+                  className="h-full object-cover cs-radius_15"
                 />
               </Div>
             </Div>

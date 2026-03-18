@@ -88,12 +88,14 @@ export default function PortfolioDetailsPage({ params }) {
         */}
       </Div>
       <Spacing lg="145" md="80" />
-      <Cta
-        title="Get In Touch With Us"
-        btnText="Our Contact Information"
-        btnLink="/contact"
-        bgSrc="/images/cta_bg.jpeg"
-      />
+      <Div className="container">
+        <Cta
+          title="Get in Touch with Us"
+          btnText="Our Contact Information"
+          btnLink="/contact"
+          bgSrc="/images/cta_bg.jpeg"
+        />
+      </Div>
     </>
   );
 }
