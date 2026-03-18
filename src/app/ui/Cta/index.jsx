@@ -9,8 +9,7 @@ export default function Cta({ title, btnText, btnLink, bgSrc, variant }) {
     <Div
       className={`cs-cta cs-style1 cs-bg text-center cs-shape_wrap_1 cs-position_1 ${
         variant ? variant : ''
-      }`}
-      style={{ backgroundImage: `url(${bgSrc})` }}
+      } bg-[#28afb0]`}
     >
       <Div className="cs-shape_1" />
       <Div className="cs-shape_1" />

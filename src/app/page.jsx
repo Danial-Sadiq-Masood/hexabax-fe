@@ -90,7 +90,7 @@ export default async function Home() {
       {/* Start Hero Section */}
       <Hero
         title=""
-        subtitle="We deliver best problem solving solution for our client and provide finest finishing product in present and upcoming future."
+        subtitle="We deliver the best problem-solving solutions for our clients, providing high-quality, finely crafted outcomes both today and in the future."
         btnText="Explore"
         btnLink="/service"
         scrollDownId="#service"
@@ -112,7 +112,7 @@ export default async function Home() {
       {/* End FunFact Section */}
 
       {/* Start Service Section */}
-      <Spacing lg="150" md="80" />
+      <Spacing lg="100" md="0" />
       <Div id="service">
         <Div className="container">
           <Div className="row">
@@ -236,7 +236,7 @@ export default async function Home() {
       {/* End Video Block Section */}
 
       {/* Start Team Section */}
-      <Spacing lg="145" md="80" />
+      <Spacing lg="100" md="0" />
       <Div className="container">
         <SectionHeading
           title="Our Projects"
@@ -246,7 +246,6 @@ export default async function Home() {
         <Spacing lg="85" md="45" />
         <HomeProjectSlider />
       </Div>
-      <Spacing lg="150" md="80" />
       {/* End Team Section */}
 
       {/* Start Testimonial Section */}
@@ -254,7 +253,7 @@ export default async function Home() {
       {/* End Testimonial Section */}
 
       {/* Start Blog Section */}
-      <Spacing lg="150" md="80" />
+      <Spacing lg="150" md="0" />
       <Div className="cs-shape_wrap_4">
         <Div className="cs-shape_4"></Div>
         <Div className="cs-shape_4"></Div>
@@ -280,7 +279,7 @@ export default async function Home() {
       {/* End Blog Section */}
 
       {/* Start MovingText Section */}
-      <Spacing lg="125" md="70" />
+      <Spacing lg="50" md="0" />
       {/* End MovingText Section */}
 
       {/* Start LogoList Section */}
@@ -292,7 +291,7 @@ export default async function Home() {
         <Spacing lg="50" md="50" />
         <LogoList />
       </Div>
-      <Spacing lg="150" md="80" />
+      <Spacing lg="100" md="0" />
       {/* End LogoList Section */}
 
       {/* Start CTA Section */}

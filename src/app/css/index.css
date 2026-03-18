@@ -1178,10 +1178,6 @@ h4 {
   font-size: 24px;
 }
 
-h5 {
-  font-size: 18px;
-}
-
 h6 {
   font-size: 16px;
 }
@@ -1754,6 +1750,7 @@ hr {
   display: inline-flex;
   align-items: center;
   font-weight: 600;
+  font-size: 1.3rem;
   color: #fff;
   cursor: pointer;
 }
@@ -2242,12 +2239,12 @@ label {
 }
 .cs-section_heading.cs-style1 .cs-section_subtitle {
   color: #999696;
-  font-size: 18px;
-  margin-bottom: 20px;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
 }
 .cs-section_heading.cs-style1 .cs-section_title {
-  font-size: 50px;
-  margin-bottom: 0;
+  font-size: 3.3rem;
+  margin-bottom: 15px;
 }
 .cs-section_heading.cs-style1 .cs-separator {
   height: 2px;
@@ -2486,7 +2483,7 @@ label {
 }
 
 .cs-page_heading.cs-style1 {
-  height: 650px;
+  height: 250px;
   padding: 120px 0 50px;
   position: relative;
 }
@@ -2515,9 +2512,6 @@ label {
 }
 .cs-page_heading.cs-style1 .breadcrumb-item.active {
   color: #fff;
-}
-.cs-page_heading.cs-style1 .cs-page_title {
-  margin-bottom: 18px;
 }
 
 .breadcrumb-item + .breadcrumb-item {
@@ -2552,8 +2546,8 @@ label {
   position: absolute;
   height: 100%;
   width: 100%;
-  right: -60px;
-  bottom: -60px;
+  right: -30px;
+  bottom: -30px;
   background-color: var(--highlight);
   border-radius: inherit;
 }
@@ -3410,7 +3404,7 @@ label {
 .cs-arrow_style2 .slick-arrow,
 .cs-arrow_style3 .slick-arrow {
   width: 60px;
-  height: 35px;
+  height: 60px;
   border: 2px solid #fff;
   border-radius: 5px;
   cursor: pointer;
@@ -4463,7 +4457,7 @@ label {
 }
 .cs-site_branding img {
   object-fit: contain;
-  max-height: 45px;
+  max-height: 52px;
 }
 
 @media screen and (min-width: 1200px) {
@@ -4499,7 +4493,7 @@ label {
     display: flex;
     align-items: center;
     height: 100%;
-    font-size: 15px;
+    font-size: 1.1rem;
     line-height: 1.6em;
     color: #fff;
   }
@@ -5194,7 +5188,7 @@ label {
 }
 .cs-funfact_wrap {
   display: flex;
-  background: linear-gradient(267.18deg, #161616 0%, #080808 100%);
+  background: var(--highlight);
   border-radius: 15px;
   padding: 60px 80px;
   position: relative;
@@ -5245,12 +5239,17 @@ label {
   align-items: flex-start;
 }
 
+.cs-funfact_heading {
+  color: #fff;
+}
+
 .cs-funfact_heading h2 {
   font-size: 50px;
   margin-bottom: 20px;
 }
 .cs-funfact_heading p {
   margin-bottom: 0;
+  font-size: 1.1rem;
   line-height: 1.75em;
 }
 
@@ -5495,7 +5494,7 @@ label {
   color: var(--highlight);
 }
 .cs-hero.cs-style1 .cs-hero_subtitle {
-  font-size: 18px;
+  font-size: 1.3rem;
   line-height: 1.9em;
   color: #fefefe;
 }

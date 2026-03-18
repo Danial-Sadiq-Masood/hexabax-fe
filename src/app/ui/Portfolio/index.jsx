@@ -33,7 +33,7 @@ export default function Portfolio({
               className="h-[100px] w-auto object-cover rounded-xl"
             />
             <h4 className="text-2xl mb-0">{title}</h4>
-            <p className="text line-clamp-4">{description}</p>
+            <p className="text line-clamp-4 text-[1.1rem] font-semibold">{description}</p>
           </div>
         </Div>
         <Div className="cs-portfolio_info">

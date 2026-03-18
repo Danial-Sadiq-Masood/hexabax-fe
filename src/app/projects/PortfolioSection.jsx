@@ -119,6 +119,17 @@ const categoryMenu = [
   },
 ];
 
+const colors = [
+  'bg-[#596F62]',
+  'bg-[#EC4E20]',
+  'bg-[#0041f0]',
+  'bg-[#28afb0]',
+  'bg-[#f9655b]',
+  'bg-[#858e96]',
+  'bg-[#b429f9]',
+  'bg-[#3a7ff2]'
+]
+
 export default function PortfolioSection({ pageNumber }) {
   const pageSize = 9;
   const startingIndex = (pageNumber) * pageSize;
@@ -129,7 +140,7 @@ export default function PortfolioSection({ pageNumber }) {
 
   return (
     <>
-      <div className="h-full grid grid-cols-3 gap-6 auto-rows-auto w-full p-8">
+      <div className="h-full grid grid-cols-3 gap-10 auto-rows-auto w-full p-8">
         {dataSlice.slice(0, 20).map((datum, index) => (
           <Div key={index} className="col-span-1 row-span-1">
             <ProjectPortfolioBox
@@ -141,6 +152,7 @@ export default function PortfolioSection({ pageNumber }) {
               src={`/images/portfolio_${(index % 7) + 1}.jpeg`}
               href={""}
               variant="cs-style1 cs-type1"
+              colorCss={colors[index % colors.length]}
             />
           </Div>
         ))}

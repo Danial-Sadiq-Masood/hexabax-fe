@@ -12,7 +12,6 @@ export default function SectionHeading({title, subtitle, btnLink, btnText, varia
       {children}
       {btnText && (
         <>
-          <Spacing lg='45' md='20'/>
           <Button btnLink={btnLink} btnText={btnText}/>
         </>
       )}

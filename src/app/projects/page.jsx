@@ -8,126 +8,27 @@ import { Icon } from "@iconify/react";
 import { DataTable } from "@/app/ui/Table/data-table";
 import { columns } from "@/app/ui/Table/columns";
 import data from "./projects.json";
+import Image from "next/image";
+import projectsImg from "@/assets/images/project_1.jpg";
 
-import PortfolioSection from './PortfolioSection'
+import PortfolioSection from "./PortfolioSection";
 
-const portfolioData = [
-  {
-    title: "Consultancy for Development of Centers of Excellence (COEs)",
-    subtitle: "See Details",
-    href: "/portfolio/portfolio-details",
-    src: "/images/portfolio_4.jpeg",
-    category: "ui_ux_design",
-    partnerLogo: "/images/adb.png",
-    description:
-      "Hexabax is transforming TVET institutes into industry-aligned Centers of Excellence through governance reform, capacity development, and modern service delivery models.",
-  },
-  {
-    title: "Business & Operational Models",
-    subtitle: "See Details",
-    href: "/portfolio/portfolio-details",
-    src: "/images/portfolio_5.jpeg",
-    partnerLogo: "/images/adb.png",
-    category: "logo_design",
-    description:
-      "Development of Business & Operational Models for operators and regulators of Water Supply, Wastewater, and Solid Waste Management services in 2 cities of Punjab province.",
-  },
-  {
-    title: "Consultancy for Development of Centers of Excellence (COEs)",
-    subtitle: "See Details",
-    partnerLogo: "/images/undp.png",
-    href: "/portfolio/portfolio-details",
-    src: "/images/portfolio_6.jpeg",
-    category: "web_design",
-    description:
-      "Hexabax is transforming TVET institutes into industry-aligned Centers of Excellence through governance reform, capacity development, and modern service delivery models.",
-  },
-  {
-    title: "Colorful Art Work",
-    subtitle: "See Details",
-    href: "/portfolio/portfolio-details",
-    src: "/images/portfolio_7.jpeg",
-    category: "mobile_apps",
-  },
-  {
-    title: "Colorful Art Work",
-    subtitle: "See Details",
-    href: "/portfolio/portfolio-details",
-    src: "/images/portfolio_8.jpeg",
-    category: "ui_ux_design",
-  },
-  {
-    title: "Colorful Art Work",
-    subtitle: "See Details",
-    href: "/portfolio/portfolio-details",
-    src: "/images/portfolio_9.jpeg",
-    category: "web_design",
-  },
-  {
-    title: "Colorful Art Work",
-    subtitle: "See Details",
-    href: "/portfolio/portfolio-details",
-    src: "/images/portfolio_10.jpeg",
-    category: "logo_design",
-  },
-  {
-    title: "Colorful Art Work",
-    subtitle: "See Details",
-    href: "/portfolio/portfolio-details",
-    src: "/images/portfolio_4.jpeg",
-    category: "ui_ux_design",
-  },
-  {
-    title: "Colorful Art Work",
-    subtitle: "See Details",
-    href: "/portfolio/portfolio-details",
-    src: "/images/portfolio_5.jpeg",
-    category: "logo_design",
-  },
-  {
-    title: "Colorful Art Work",
-    subtitle: "See Details",
-    href: "/portfolio/portfolio-details",
-    src: "/images/portfolio_6.jpeg",
-    category: "web_design",
-  },
-];
-const categoryMenu = [
-  {
-    title: "Web Design",
-    category: "web_design",
-  },
-  {
-    title: "UI/UX Design",
-    category: "ui_ux_design",
-  },
-  {
-    title: "Mobile Apps",
-    category: "mobile_apps",
-  },
-  {
-    title: "Logo Design",
-    category: "logo_design",
-  },
-];
+function parsePage(value) {
+  if (typeof value !== "string") return 0;
 
-function parsePage(value){
-  if (typeof value !== "string") return 0
+  const page = Number.parseInt(value, 10);
 
-  const page = Number.parseInt(value, 10)
+  if (!Number.isFinite(page) || page < 0) return 0;
 
-  if (!Number.isFinite(page) || page < 0) return 0
-
-  return page
+  return page;
 }
 
 export function generateStaticParams() {
-
   const upper = Math.floor(data.length / pageSize);
 
-  return new Array(upper).fill('').map((_,i) => ({
-    page : `${i}`
-  }))
+  return new Array(upper).fill("").map((_, i) => ({
+    page: `${i}`,
+  }));
 }
 
 export default function PortfolioPage({ searchParams }) {
@@ -140,9 +41,43 @@ export default function PortfolioPage({ searchParams }) {
         bgSrc="/images/portfolio_hero_bg.jpeg"
         pageLinkText="PROJECTS"
       />
-      <Spacing lg="145" md="80" />
+      <Spacing lg="80" md="0" />
       <Div className="container">
-        <PortfolioSection pageNumber={page}/>
+        <Div className="grid gap-14 grid-cols-[60%_40%] grid-rows-1">
+          <Div className="col-start-1 col-span-1 row-start-1 row-span-1 pr-10">
+            <SectionHeading
+              title={"We Deliver Impactful and Innovative Projects"}
+              subtitle="Work we have Delivered"
+            >
+              <Spacing lg="30" md="20" />
+              <p className="cs-m0 text-[1.1rem] font-semibold text-white">
+                At Hexabax, our projects are a testament to our commitment to
+                delivering measurable impact and lasting value. We take pride in
+                executing diverse, high-quality initiatives that drive
+                innovation, optimize performance, and solve complex business
+                challenges. With a focus on precision, collaboration, and
+                forward-thinking strategies, each project we undertake is
+                designed to exceed expectations and create meaningful results
+                for our clients.
+              </p>
+              <Spacing lg="30" md="30" />
+              <Div className="cs-separator cs-accent_bg"></Div>
+              <Spacing lg="25" md="40" />
+            </SectionHeading>
+          </Div>
+          <Div className="col-start2 col-span-1 row-start-1 row-span-1">
+            <Image
+              src={projectsImg}
+              alt="Projects"
+              className="h-[80%] object-cover cs-radius_15"
+            />
+            <Spacing lg="25" md="25" />
+          </Div>
+        </Div>
+      </Div>
+      <Spacing lg="70" md="0" />
+      <Div className="container">
+        <PortfolioSection pageNumber={page} />
       </Div>
       {/*<Div className="container">
         <div className="hidden h-full flex-1 flex-col w-full p-8 md:flex">
@@ -152,11 +87,14 @@ export default function PortfolioPage({ searchParams }) {
         </div>
       </Div>*/}
       <Spacing lg="145" md="80" />
-      <Cta
-        title="contact@hexabax.com"
-        bgSrc="/images/cta_bg_2.jpeg"
-        variant="rounded-0"
-      />
+      <Div className="container">
+        <Cta
+          title="Get in Touch with Us"
+          btnText="Our Contact Information"
+          btnLink="/contact"
+          bgSrc="/images/cta_bg.jpeg"
+        />
+      </Div>
     </>
   );
 }

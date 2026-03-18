@@ -7,16 +7,15 @@ import projectsData from "@/assets/data/projects.json";
 import { notFound } from "next/navigation";
 
 export function generateStaticParams() {
-
-  return projectsData.map((_,i) => ({ 
-    projectDetailsId : `${i}` 
-  }))
+  return projectsData.map((_, i) => ({
+    projectDetailsId: `${i}`,
+  }));
 }
 
 export default function PortfolioDetailsPage({ params }) {
   const { projectDetailsId } = params;
 
-  const data = projectsData[parseInt(projectDetailsId,10)];
+  const data = projectsData[parseInt(projectDetailsId, 10)];
 
   if (!data) {
     return notFound();
@@ -41,7 +40,11 @@ export default function PortfolioDetailsPage({ params }) {
           <Div className="col-lg-6">
             <SectionHeading title={data["Project Title"]} subtitle="">
               <Spacing lg="40" md="20" />
-              {<p>{data["Description"]}</p>}
+              {
+                <p className="cs-m0 text-[1.1rem] font-semibold text-white">
+                  {data["Description"]}
+                </p>
+              }
             </SectionHeading>
           </Div>
           <Div className="col-lg-5 offset-lg-1">
@@ -53,22 +56,21 @@ export default function PortfolioDetailsPage({ params }) {
                 <h3 className="cs-accent_color cs-font_22 cs-font_18_sm cs-m0">
                   Client:
                 </h3>
-                <p className="cs-m0">{data['Client']}</p>
+                <p className="cs-m0">{data["Client"]}</p>
                 <Spacing lg="30" md="30" />
               </Div>
               <Div className="col-6">
                 <h3 className="cs-accent_color cs-font_22 cs-font_18_sm cs-m0">
                   Date:
                 </h3>
-                <p className="cs-m0">{data['Date']}</p>
+                <p className="cs-m0">{data["Date"]}</p>
                 <Spacing lg="30" md="30" />
               </Div>
             </Div>
           </Div>
         </Div>
         <Spacing lg="65" md="10" />
-        {
-        /*<Div className="cs-page_navigation cs-center">
+        {/*<Div className="cs-page_navigation cs-center">
           <Div>
             <Button
               btnLink="/portfolio/portfolio-details"

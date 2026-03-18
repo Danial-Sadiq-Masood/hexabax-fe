@@ -44,7 +44,7 @@ export default async function BlogDetailsPage({ params }) {
                 <Image
                   src={post?.image}
                   alt="Post"
-                  className="w-100 cs-radius_15 object-contain"
+                  className="w-100 cs-radius_15 object-cover"
                   width={500}
                   height={400}
                 />

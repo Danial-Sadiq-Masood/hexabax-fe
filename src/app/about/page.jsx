@@ -45,16 +45,16 @@ export default function AboutPage() {
       {/* End Page Heading Section */}
 
       {/* Start About Section */}
-      <Spacing lg="150" md="80" />
+      <Spacing lg="80" md="0" />
       <Div className="container">
-        <Div className="row">
-          <Div className="col-xl-5 col-lg-7">
+        <Div className="grid gap-14 grid-cols-[60%_40%] grid-rows-1">
+          <Div className="col-start-1 col-span-1 row-start-1 row-span-1">
             <SectionHeading
               title="We Promise High Quality Management Consultancy"
               subtitle="About Our Company"
             >
               <Spacing lg="30" md="20" />
-              <p className="cs-m0">
+              <p className="cs-m0 text-[1.1rem] font-semibold text-white">
                 At Hexabax, we are not just a management consultancy; we are your trusted partners in transforming your organization into a powerhouse of efficiency, innovation, and growth. With a deep-rooted commitment to excellence, we specialize in a comprehensive suite of services tailored to meet your unique needs.
               </p>
               <Spacing lg="30" md="30" />
@@ -62,27 +62,11 @@ export default function AboutPage() {
               <Spacing lg="25" md="40" />
             </SectionHeading>
           </Div>
-          <Div className="col-lg-5 offset-xl-2">
+          <Div className="col-start2 col-span-1 row-start-1 row-span-1">
             <Image
               src={aboutImg}
               alt="About"
-              className="w-100 cs-radius_15"
-            />
-            <Spacing lg="25" md="25" />
-          </Div>
-          <Div className="col-lg-7">
-            <Image
-              src={aboutImg2}
-              alt="About"
-              className="w-100 cs-radius_15"
-            />
-            <Spacing lg="25" md="25" />
-          </Div>
-          <Div className="col-lg-5">
-            <Image
-              src={aboutImg3}
-              alt="About"
-              className="w-100 cs-radius_15"
+              className="h-full object-cover cs-radius_15"
             />
             <Spacing lg="25" md="25" />
           </Div>
@@ -95,7 +79,7 @@ export default function AboutPage() {
       <Div className="container">
         <FunFact
           title="Company Highlights"
-          subtitle="Sed ut perspiciatis unde omnis iste natus error voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis."
+          subtitle="At Hexabax, we’re more than consultants—we’re your partners in driving efficiency, innovation, and growth, with tailored solutions built for your success."
           data={funfaceData}
         />
       </Div>
@@ -111,7 +95,7 @@ export default function AboutPage() {
                 <Image
                   src={aboutImg4}
                   alt="About"
-                  className="w-100 cs-radius_15"
+                  className="w-full cs-radius_15"
                 />
               </Div>
             </Div>
@@ -123,7 +107,7 @@ export default function AboutPage() {
               subtitle=""
             >
               <Spacing lg="30" md="20" />
-              <p className="cs-m0">
+              <p className="cs-m0 text-[1.1rem] font-semibold text-white">
                 Our vision is to ascend to unicorn status, becoming a global powerhouse in management consultancy, recognized for our game-changing strategies and transformative impact on businesses. We aim to lead the industry by consistently delivering exceptional value, innovation, and growth.
               </p>
               <Spacing lg="30" md="30" />
@@ -135,7 +119,7 @@ export default function AboutPage() {
               subtitle=""
             >
               <Spacing lg="30" md="20" />
-              <p className="cs-m0">
+              <p className="cs-m0 text-[1.1rem] font-semibold text-white">
                 We aspire to transform the landscape of management consultancy, propelling our firm towards unicorn status through relentless innovation, unrivaled expertise, and unparalleled client value. We are committed to nurturing our talented team, fostering a dynamic and inclusive work environment, and promoting personal and professional growth. In harmony with our dedication to sustainability, we aim to minimize our environmental footprint and contribute positively to the communities we serve.
               </p>
               <Spacing lg="30" md="30" />
