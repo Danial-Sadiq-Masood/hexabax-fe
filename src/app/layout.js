@@ -28,7 +28,9 @@ export default async function RootLayout({ children }) {
       </head>
       <body className={`${openSans.variable} ${poppins.variable}`}>
         <Header />
+        <div className="flex flex-col gap-25 justify-between">
         {children}
+        </div>
         <Footer />
       </body>
     </html>

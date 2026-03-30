@@ -63,7 +63,7 @@ const date = new Date().getFullYear();
 
 export default function Footer({ copyrightText, logoSrc, logoAlt, text }) {
   return (
-    <footer className="cs-fooer">
+    <footer className="cs-fooer mt-25 px-5">
       <Div className="cs-fooer_main">
         <Div className="container">
           <Div className="flex gap-3 md:flex-row flex-col">

@@ -35,12 +35,12 @@ export default async function ServiceDetailsPage({ params }) {
         bgSrc="/images/service_hero_bg.jpeg"
         pageLinkText="ORGANIZATIONAL-DEVELOPMENT"
       />
-      <Spacing lg="80" md="0" />
+      
       <Div className="container">
-        <Div className="grid gap-14 grid-cols-[60%_40%] grid-rows-1">
+        <Div className="flex flex-col lg:grid gap-14 grid-cols-[60%_40%] grid-rows-1">
           <Div className="col-start-1 col-span-1 row-start-1 row-span-1 pr-10">
             <SectionHeading title={data.heading} subtitle="Service Details">
-              <Spacing lg="30" md="20" />
+              
               {data.details.map((para, index) => (
                 <p
                   className="text-[1.1rem] font-semibold text-white mb-4"
@@ -49,23 +49,23 @@ export default async function ServiceDetailsPage({ params }) {
                   {para}
                 </p>
               ))}
-              <Spacing lg="30" md="30" />
+              
               <Div className="cs-separator cs-accent_bg"></Div>
-              <Spacing lg="25" md="40" />
+              
             </SectionHeading>
           </Div>
-          <Div className="col-start2 col-span-1 row-start-1 row-span-1">
+          <Div className="md:max-w-[50%] lg:max-w-full col-start2 col-span-1 row-start-1 row-span-1">
             <Image
               src={data.image}
               alt="About"
               className="h-[80%] object-cover cs-radius_15"
             />
-            <Spacing lg="25" md="25" />
+            
           </Div>
         </Div>
       </Div>
       {/*
-      <Spacing lg="80" md="0" />
+      
       <Div className="container">
         <Div className="flex gap-5">
           <Div className="col-xl-5 col-lg-6">
@@ -77,7 +77,7 @@ export default async function ServiceDetailsPage({ params }) {
                 placeholder="blur"
               />
             </Div>
-            <Spacing lg="0" md="40" />
+            
           </Div>
           <Div className="col-lg-6">
             {data.details.map((para, index) => (
@@ -88,19 +88,19 @@ export default async function ServiceDetailsPage({ params }) {
                 {para}
               </p>
             ))}
-            <Spacing lg="50" md="30" />
+            
           </Div>
         </Div>
       </Div>
       */}
-      <Spacing lg="80" md="" />
+      
       <Div className="container">
         <SectionHeading
           title="Our Expertise"
           subtitle=""
           variant="cs-style1 text-center"
         />
-        <Spacing lg="90" md="45" />
+        
         <Div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 gap-y-10">
           {data.subServices.map((service, index) => (
             <IconBox
@@ -112,7 +112,7 @@ export default async function ServiceDetailsPage({ params }) {
           ))}
         </Div>
       </Div>
-      <Spacing lg="145" md="80" />
+      
       {/*
       <Div className="container cs-shape_wrap_4">
         <Div className="cs-shape_4"></Div>
@@ -124,7 +124,7 @@ export default async function ServiceDetailsPage({ params }) {
                 title="Some pre questions and answers"
                 subtitle="FAQ’s"
               />
-              <Spacing lg="90" md="45" />
+              
             </Div>
             <Div className="col-lg-6 offset-xl-1">
               <Accordion />
@@ -132,7 +132,7 @@ export default async function ServiceDetailsPage({ params }) {
           </Div>
         </Div>
       </Div>
-      <Spacing lg="150" md="80" />
+      
       */}
     </>
   );

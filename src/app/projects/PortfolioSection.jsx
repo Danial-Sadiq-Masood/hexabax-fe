@@ -140,7 +140,7 @@ export default function PortfolioSection({ pageNumber }) {
 
   return (
     <>
-      <div className="h-full grid grid-cols-3 gap-10 auto-rows-auto w-full p-8">
+      <div className="h-full flex flex-col lg:grid grid-cols-3 gap-10 auto-rows-auto w-full p-8">
         {dataSlice.slice(0, 20).map((datum, index) => (
           <Div key={index} className="col-span-1 row-span-1">
             <ProjectPortfolioBox

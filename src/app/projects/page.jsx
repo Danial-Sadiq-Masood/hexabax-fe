@@ -41,15 +41,15 @@ export default function PortfolioPage({ searchParams }) {
         bgSrc="/images/portfolio_hero_bg.jpeg"
         pageLinkText="PROJECTS"
       />
-      <Spacing lg="80" md="0" />
+      
       <Div className="container">
-        <Div className="grid gap-14 grid-cols-[60%_40%] grid-rows-1">
+        <Div className="flex flex-col md:grid gap-14 grid-cols-[60%_40%] grid-rows-1">
           <Div className="col-start-1 col-span-1 row-start-1 row-span-1 pr-10">
             <SectionHeading
               title={"We Deliver Impactful and Innovative Projects"}
               subtitle="Work we have Delivered"
             >
-              <Spacing lg="30" md="20" />
+              
               <p className="cs-m0 text-[1.1rem] font-semibold text-white">
                 At Hexabax, our projects are a testament to our commitment to
                 delivering measurable impact and lasting value. We take pride in
@@ -60,9 +60,9 @@ export default function PortfolioPage({ searchParams }) {
                 designed to exceed expectations and create meaningful results
                 for our clients.
               </p>
-              <Spacing lg="30" md="30" />
+              
               <Div className="cs-separator cs-accent_bg"></Div>
-              <Spacing lg="25" md="40" />
+              
             </SectionHeading>
           </Div>
           <Div className="col-start2 col-span-1 row-start-1 row-span-1">
@@ -71,11 +71,11 @@ export default function PortfolioPage({ searchParams }) {
               alt="Projects"
               className="h-[80%] object-cover cs-radius_15"
             />
-            <Spacing lg="25" md="25" />
+            
           </Div>
         </Div>
       </Div>
-      <Spacing lg="70" md="0" />
+      
       <Div className="container">
         <PortfolioSection pageNumber={page} />
       </Div>
@@ -86,7 +86,7 @@ export default function PortfolioPage({ searchParams }) {
           </div>
         </div>
       </Div>*/}
-      <Spacing lg="145" md="80" />
+      
       <Div className="container">
         <Cta
           title="Get in Touch with Us"
